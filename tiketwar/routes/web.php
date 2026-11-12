@@ -17,6 +17,12 @@ Route::get('/', function () {
 Route::get('/konser', [KonserController::class, 'index'])
     ->name('konser.index');
 
+Route::get('/konser/create', [KonserController::class, 'create'])
+    ->name('konser.create');
+
+Route::post('/konser', [KonserController::class, 'store'])
+    ->name('konser.store');
+
 Route::get('/konser/{id}', [KonserController::class, 'show'])
     ->whereNumber('id')
     ->name('konser.detail');
