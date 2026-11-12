@@ -35,4 +35,8 @@ Route::put('/konser/{id}', [KonserController::class, 'update'])
     ->whereNumber('id')
     ->name('konser.update');
 
+Route::delete('/konser/{id}', [KonserController::class, 'destroy'])
+    ->whereNumber('id')
+    ->name('konser.destroy');
+
 Route::view('/tentang', 'about')->name('tentang');
